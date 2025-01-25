@@ -2729,6 +2729,8 @@ interface PxTolerancesScale {
 [NoDelete]
 interface PxTopLevelFunctions {
     [Value] static PxSimulationFilterShader DefaultFilterShader();
+    [Value] static PxSimulationFilterShader TriggersUsingFilterShader();
+    static boolean IsTriggerShape(PxShape shape);
     static void setupPassThroughFilterShader(PxSceneDesc sceneDesc, PassThroughFilterShader filterShader);
     static PxControllerManager CreateControllerManager([Ref] PxScene scene, optional boolean lockingEnabled);
     static PxFoundation CreateFoundation(unsigned long version, [Ref] PxDefaultAllocator allocator, [Ref] PxErrorCallback errorCallback);
